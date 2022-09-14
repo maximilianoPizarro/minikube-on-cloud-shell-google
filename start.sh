@@ -8,6 +8,13 @@ echo "create deployment httpd sample"
 echo "---------------------------"
 kubectl create deployment httpd --image=httpd --port=80
 
+echo "waiting the pod with status Running"
+echo "---------------------------"
+for podname in $(kubectl get endpoints httpd -o json | jq -r 'select(.subsets != null) | .subsets[].addresses[].targetRef.name')
+do
+kubectl get pods $podname  -o json | jq -r ' select(.status.conditions[].type == "Running") | .status.conditions[].type ' | grep -x Running
+done
+
 echo "expose httpd sample"
 echo "---------------------------"
 kubectl expose deployment httpd  
