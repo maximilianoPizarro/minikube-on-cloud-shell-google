@@ -12,11 +12,13 @@
 
 ## In Cloud Shell terminal run:
 
+maximiliano_pizarro_5@cloudshell:~/cloudshell_open/minikube-on-cloud-shell-google$
 ```bash
-maximiliano_pizarro_5@cloudshell:~/cloudshell_open/minikube-on-cloud-shell-google$ ## chmod 777 ./start.sh
+chmod 777 ./start.sh
 ```
 
+maximiliano_pizarro_5@cloudshell:~/cloudshell_open/minikube-on-cloud-shell-google$
 ```bash
-maximiliano_pizarro_5@cloudshell:~/cloudshell_open/minikube-on-cloud-shell-google$ ## ./start.sh
+./start.sh
 ```
 
